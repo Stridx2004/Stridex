@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StrideX – Every Step, A New Adventure</title><meta name="description" content="StrideX smart LED shoes for kids. Smart steps, safer dreams.">
+<style>
+:root{--bg:#fdf1f6;--ink:#2d2a3e;--mu:#6b6783;--mint:#6fbfa3;--pk:#f8a8cb;--pkd:#e0559b;--v:#9a6bdc;--b:#3aa6e8;--g:#4fcf5a;--card:rgba(255,255,255,.88);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*:before,*:after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
+body{margin:0;color:var(--ink);font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;line-height:1.5}
+.hw{font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive}
+h1,h2,h3{font-family:"Trebuchet MS","Segoe UI",sans-serif;font-weight:800;line-height:1.05;margin:0}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;background:linear-gradient(160deg,#fff4e8,#fdeaf3 45%,#e9f1ff)}
+#fb{display:none;position:fixed;left:3vw;top:30vh;width:min(44vw,520px);z-index:0}
+main,header,footer{position:relative;z-index:2}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;gap:12px;padding:12px 5vw;background:rgba(255,244,250,.85);backdrop-filter:blur(10px)}
+.logo{font:800 26px "Trebuchet MS",sans-serif;color:var(--mint)}.logo sup{font-size:10px}
+nav{display:flex;gap:18px;margin-left:auto;font-size:14px;color:var(--mu);overflow-x:auto;min-width:0}nav a{white-space:nowrap}
+.bag{background:var(--pkd);color:#fff;border:0;border-radius:99px;padding:8px 16px;font-weight:700}
+section{padding:9vh 5vw;display:flex;flex-direction:column;justify-content:center}
+.W{width:min(100%,780px);margin-left:auto}.full{width:100%}
+.panel{background:var(--card);border-radius:22px;padding:22px;box-shadow:0 10px 40px #b9739b22;margin-bottom:22px}
+.rib{display:inline-block;background:var(--pk);border-radius:12px 40px 12px 40px;padding:10px 26px;font-size:clamp(15px,1.9vw,22px);transform:rotate(-1.5deg)}
+.big{font:800 clamp(56px,10vw,130px)/1 "Trebuchet MS",sans-serif;color:var(--mint);margin:0}.big sup{font-size:.2em}
+h2{font-size:clamp(24px,3.2vw,38px);margin-bottom:14px}
+.hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr);align-items:center}
+.feat{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f0d6e3}.feat:last-child{border:0}.ic{width:44px;height:44px;border-radius:50%;background:var(--pk);display:grid;place-items:center;font-size:20px;flex:none}
+.feat b{display:block}.feat span.d{font-size:13px;color:var(--mu)}
+.badge{font-size:11px;border-radius:99px;padding:2px 9px;font-weight:700;display:inline-block;margin-top:2px}.ok{background:#d3f5d6;color:#1f7a2a}.pr{background:#ffe8c4;color:#9a5a00}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.ph{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 24px #b9739b33;text-align:center;transform-style:preserve-3d;transition:transform .15s}
+.ph img{width:100%;aspect-ratio:1;object-fit:cover;display:block}.ph div{padding:10px 8px;font-size:14px}.ph small{display:block;color:var(--mu)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+ul.tick{list-style:none;padding:0;margin:0}ul.tick li{padding:6px 0 6px 26px;position:relative}ul.tick li:before{content:"✔";position:absolute;left:0;color:var(--mint)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px #b9739b2a}
+.pic{aspect-ratio:1;background:radial-gradient(ellipse at 50% 88%,#ecd6e4 0,#fff0 52%),radial-gradient(circle at 50% 35%,#fff,#f8eef4);display:grid;place-items:center;padding:8%}.pic img{width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 18px 16px #0003);transition:transform .4s}.pic:hover img{transform:scale(1.07) rotate(-2deg)}.co{position:fixed;inset:0;z-index:60;background:rgba(45,42,62,.55);display:none;align-items:center;justify-content:center;padding:12px}.cop{background:#fff;border-radius:22px;padding:22px;width:min(640px,100%);max-height:94vh;overflow:auto}.fl{display:block;font-size:13px;color:var(--mu);margin-bottom:10px}.fl input,.fl textarea{margin-top:4px}textarea{width:100%;background:#fff;border:1px solid #cfc3de;border-radius:10px;padding:10px;font:inherit;color:var(--ink)}.pay{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;border:1px solid #cfc3de;border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer}.pay input{width:auto}.pay .note{flex-basis:100%;margin-left:26px}.err{color:#c0262d}.qr{display:grid;place-items:center;background:#fff;padding:14px;border-radius:16px;border:1px solid #eee;width:max-content;min-height:100px;margin:12px auto}.wa{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:35;background:#25d366;color:#052e16;font-weight:800;border-radius:99px;padding:12px 18px;box-shadow:0 8px 24px #0003}.hero>div{max-width:520px}.card .btn:not(.alt){background:var(--acc,var(--pkd))}.card .price{color:var(--acc,var(--ink))}.cols{display:flex;gap:10px;margin:10px 0 4px}.cols button{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #0004}.cols button[aria-pressed=true]{box-shadow:0 0 0 3px var(--ink)}.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.tc{background:var(--card);border-radius:20px;padding:20px;box-shadow:0 8px 24px #b9739b22}.tc h3{font-size:17px;margin:12px 0 6px}.tc p{margin:0 0 8px;color:var(--mu);font-size:14px}.ic.big2{width:56px;height:56px;font-size:26px}.lace{animation:sq 2.4s ease-in-out infinite}@keyframes sq{50%{transform:scaleX(.7)}}.pulse{animation:pu 1.6s infinite}@keyframes pu{50%{box-shadow:0 0 22px var(--pkd)}}.spin{animation:sp 5s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.cb{padding:20px}.cb h3{font-size:19px}.price{font-size:22px;font-weight:800;margin:6px 0}
+.sw{display:flex;gap:8px;margin:8px 0 12px;align-items:center;color:var(--mu);font-size:14px}.sw i{width:16px;height:16px;border-radius:50%;border:1px solid #0002}
+ul.f{padding-left:18px;color:var(--mu);margin:0 0 12px;font-size:14px}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.sizes button{background:#fff;color:var(--ink);border:1px solid #cfc3de;border-radius:10px;padding:8px 12px}.sizes button[aria-pressed=true]{background:var(--ink);color:#fff}
+.row{display:flex;gap:10px}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;background:var(--pkd);color:#fff}.btn.alt{background:#fff;color:var(--ink);border:1px solid #cfc3de}.row .btn{flex:1}
+.wish{flex:none!important;width:46px;padding:0!important;font-size:20px}.wish[aria-pressed=true]{color:var(--pkd);border-color:var(--pkd)}
+video{width:100%;max-width:900px;border-radius:22px;background:#000;display:block;margin:auto;box-shadow:0 14px 50px #b9739b44}
+.dot{display:inline-flex;flex-direction:column;align-items:center;font-size:12px;margin-right:14px}.dot i{width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #0003}
+.price-big{font:800 56px "Trebuchet MS",sans-serif;color:var(--pkd)}
+details{background:var(--card);border-radius:14px;padding:14px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}details p{color:var(--mu);margin:8px 0 0}
+input{background:#fff;border:1px solid #cfc3de;border-radius:10px;color:var(--ink);padding:10px;width:100%}
+footer{padding:40px 5vw 60px;background:linear-gradient(#e6f4ea,#cfe8d5);color:#2f5a45;text-align:center}footer .hw{font-size:20px}
+#drawer{position:fixed;inset:0 0 0 auto;width:min(420px,100%);background:#fff;z-index:40;transform:translateX(105%);transition:transform .3s;padding:22px;display:flex;flex-direction:column;overflow:auto;box-shadow:-10px 0 40px #0003}#drawer.open{transform:none}
+.li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eee}.th{width:64px;height:64px;border-radius:12px;background:#fff;flex:none;border:1px solid #eee;object-fit:contain}
+.q button{width:28px;height:28px;border-radius:8px;border:1px solid #cfc3de;background:#fff}.tot div{display:flex;justify-content:space-between;padding:3px 0}.note{font-size:12px;color:var(--mu)}
+#toast{position:fixed;bottom:24px;left:50%;translate:-50% 0;background:var(--ink);color:#fff;padding:10px 18px;border-radius:99px;z-index:50;opacity:0;transition:opacity .3s;pointer-events:none}#toast.on{opacity:1}
+@media(max-width:900px){.hero{padding-top:46vh;align-items:start}.W{margin:0;width:100%}.panel{background:rgba(255,255,255,.93)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style></head><body>
+<canvas id="gl" aria-hidden="true"></canvas><img id="fb" alt="StrideX Dino and Butterfly LED shoes" src="assets/pair.jpg">
+<header><a class="logo" href="#top">StrideX<sup>™</sup></a><nav><a href="#boys">Boys</a><a href="#girls">Girls</a><a href="#details">Details</a><a href="#tech">Technology</a><a href="#film">Film</a><a href="#price">Pricing</a><a href="#about">About</a><a href="#faq">FAQ</a></nav><button class="bag" id="open" aria-label="Open shopping bag">Bag (<span id="cnt">0</span>)</button></header>
+<main id="top">
+<section class="hero" data-cam="1.9,-.1,5.8,-.35,n"><div><h1 class="big">StrideX<sup>™</sup></h1><h2 style="font-size:clamp(24px,3.4vw,44px)">BIG ADVENTURES.<br>TINY FEET.<br>SMART STEPS.</h2><p style="max-width:44ch;margin:10px 0 12px;color:var(--mu)">Discover the next generation of kids’ footwear. Stylish designs, magical LED lights and all-day comfort.</p><p class="hw" style="font-size:18px;margin:0 0 16px;color:var(--pkd)">Every Step, A New Adventure.</p><div class="row" style="max-width:380px"><a class="btn" href="#boys" style="text-align:center">SHOP BOYS</a><a class="btn" href="#girls" style="text-align:center">SHOP GIRLS</a></div></div></section>
+<section style="padding-bottom:0" data-cam="-2.2,0,4.6,.5,b"><div class="W"><div class="panel" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><input id="q" placeholder="Search name, colour, category" aria-label="Search" style="flex:2;min-width:180px"><select id="cat" aria-label="Category" style="flex:1;min-width:130px;padding:10px;border-radius:10px;border:1px solid #cfc3de"><option value="all">All</option><option value="boys">Boys</option><option value="girls">Girls</option><option value="led">LED shoes</option></select><span class="note" id="cntx"></span></div></div></section>
+<section id="boys" data-cam="-2.2,0,4.6,.5,b"><div class="W"><h2>Boys Edition: built for little adventurers</h2><div class="grid" id="shop"></div></div></section>
+<section id="girls" data-cam="-2.2,0,4.6,.5,g"><div class="W"><h2>Girls Collection: NatureGlow</h2><p class="hw" style="margin:-6px 0 8px;color:var(--pkd);font-size:20px">Every Step, A Little Magic.</p><p style="color:var(--mu);max-width:56ch;margin:0 0 16px">NatureGlow brings magic to every little step. Designed with beautiful butterfly detailing, colourful LED lights and soft cushioning, these shoes make every adventure special.</p><div class="grid" id="shop2"></div></div></section>
+
+<section data-cam="-2.2,0,5.4,.4,n"><div class="W"><div class="rib hw" style="margin-bottom:16px">Smart LED Shoes for Kids<small style="display:block;font-size:13px">Play · Explore · Adventure</small></div>
+<div class="panel" data-tilt id="feats"></div></div></section>
+
+<section id="details" data-cam="0,.2,12,0,n"><div class="full"><div class="strip" id="strip"></div><p class="note" style="text-align:center;margin-top:10px">Close-ups cropped from the original product photograph.</p></div></section>
+
+<section id="tech" data-cam="0,.5,12,0,n"><div class="full"><h2 style="text-align:center">More than just shoes</h2><p class="note" style="text-align:center;margin-bottom:16px">Green: visible on the shoes in our photos. Amber: prototype concept or to be confirmed, not yet claimed as working.</p><div class="tg" id="tg"></div></div></section>
+<section data-cam="-2.2,0,5.2,.3,n"><div class="W"><div class="panel" data-tilt><h2>What’s inside the box</h2><div class="two" style="margin-top:14px"><ul class="tick"><li>1 pair of smart shoes</li><li>Charging cable (USB Type-C)</li></ul><ul class="tick"><li>User manual</li><li>Replacement tracker (concept, if offered)</li></ul></div></div>
+<div class="panel" data-tilt><h2>How we keep it affordable</h2><ul class="tick"><li>Cost-effective, durable materials</li><li>Local manufacturing and bulk production</li><li>Minimal, eco-friendly packaging</li><li>Direct-to-customer sales</li></ul><p class="hw" style="color:var(--mint);margin:10px 0 0">Smart features, just more affordable!</p></div></div></section>
+
+<section id="film" data-cam="0,-.8,8,0,n"><div class="full" style="text-align:center"><h2>See it in action</h2><video id="vid" controls muted playsinline loop preload="metadata" poster="assets/film-poster.jpg" src="assets/film.mp4"></video></div></section>
+
+<section id="price" data-cam="-2.2,0,5.2,.3,n"><div class="W"><div class="panel" data-tilt><h2>Our pricing</h2><div class="price-big">₹2,499 <small style="font-size:16px;color:var(--mu)">per pair</small></div><p class="hw">Smart technology + good quality + affordable price = a safer tomorrow</p></div>
+<div class="panel" data-tilt><h2>Colour options</h2><p><b>Girls · NatureGlow</b></p><div><span class="dot"><i style="background:linear-gradient(135deg,#f58fc0,#9a6bdc)"></i>Pink &amp; Purple</span><span class="dot"><i style="background:#c9b3f0"></i>Lilac</span><span class="dot"><i style="background:#5bb8f0"></i>Blue</span><span class="dot"><i style="background:#f4f1f8"></i>White</span><span class="dot"><i style="background:#161616"></i>Black</span></div><p><b>Boys</b></p><div><span class="dot"><i style="background:#14275a"></i>Navy</span><span class="dot"><i style="background:#4fcf5a"></i>Green</span><span class="dot"><i style="background:#111"></i>Black</span><span class="dot"><i style="background:#999"></i>Grey</span></div><p class="note">Final colours and sizes in stock are set by the store.</p></div>
+<div class="panel" data-tilt><h2>Why choose StrideX</h2><ul class="tick"><li>Safe for your child (once safety features are tested)</li><li>Affordable for every family</li><li>Stylish and comfortable</li></ul></div></div></section>
+
+<section id="about" data-cam="-2.2,0,5,.3,n"><div class="W"><div class="panel" data-tilt><h2>WE DON’T JUST MAKE SHOES. WE MAKE EVERY STEP SPECIAL.</h2><p>StrideX is built around the idea that every childhood adventure deserves comfort, creativity and excitement.</p><p>Our smart footwear combines modern design, innovative LED technology and comfortable materials to make every little step memorable.</p><p>From playground adventures to everyday journeys, StrideX makes every step special.</p></div></div></section>
+<section id="faq" data-cam="-2,0,6,.3,n"><div class="W"><h2>Questions</h2>
+<details><summary>How do the shoes charge?</summary><p>A USB port is visible on the side of both shoes. Battery details will be added once confirmed.</p></details>
+<details><summary>Do GPS, auto-lacing and the danger zone sensor work?</summary><p>Not yet. They are prototype concepts and won’t be listed as working until tested.</p></details>
+<details><summary>Shipping, returns, contact?</summary><p>The store owner will add shipping and return terms. For orders and questions, WhatsApp +91 62003 71216.</p></details></div></section>
+</main>
+<footer><b class="logo">StrideX</b><p class="hw">Every Step, A New Adventure.</p><div style="max-width:380px;margin:14px auto"><b>Join the StrideX Family</b><div style="display:flex;gap:8px;margin-top:8px"><input disabled placeholder="Email (needs backend)" aria-label="Email"><button class="btn" disabled>Subscribe</button></div></div><p class="note">Shipping · Returns · Refunds · Privacy · Terms need your own policy text.</p><p class="note">© 2026 StrideX. All Rights Reserved.</p></footer>
+<aside id="drawer" aria-label="Shopping bag"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Your bag</h3><button class="btn alt" id="close" style="padding:6px 12px">Close</button></div><div id="items" style="flex:1"></div><div id="foot"></div></aside><a class="wa" href="https://wa.me/916200371216?text=Hi%20StrideX%2C%20I%20want%20to%20know%20about%20your%20shoes." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a><div id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const IMG=document.getElementById('fb').src,HB='assets/hero-boy.webp',HG='assets/hero-girl.webp',$=s=>document.querySelector(s),fmt=n=>'₹'+n.toLocaleString('en-IN');
+const F=[['👟','Auto-lacing system','Press the button, laces tighten. Concept.',0],['📍','GPS tracker','Location on your phone. Concept, untested.',0],['⚠️','Danger zone sensor','Fall and unsafe-area alerts. Concept, untested.',0],['💡','LED light sole','Bright, visible lights in the sole.',1],['🪶','Comfort technology','Lightweight, soft cushioning. Specs to be confirmed.',0]];
+$('#feats').innerHTML=F.map(f=>`<div class="feat"><div class="ic">${f[0]}</div><div><b>${f[1]}</b><span class="d">${f[2]}</span><br><span class="badge ${f[3]?'ok':'pr'}">${f[3]?'Visible on product':'Prototype / to confirm'}</span></div></div>`).join('');
+const D=[['power-button-butterfly.jpg','Power button & butterfly','Real close-up'],['dino-graphic.jpg','Dino graphic','Real close-up'],['led-sole.jpg','LED sole','Real close-up'],['usb-port.jpg','USB charging port','Real close-up'],['strap-laces.jpg','Strap & laces','Real close-up']];
+$('#strip').innerHTML=D.map(d=>`<figure class="ph" data-tilt style="margin:0"><img loading="lazy" src="assets/${d[0]}" alt="${d[1]}"><div><b>${d[1]}</b><small>${d[2]}</small></div></figure>`).join('');
+const TC=[['👟','Smart auto-lacing','One-touch lace tightening concept.',0,'lace'],['📍','GPS tracker','Shows location on a parent’s phone. Concept, untested.',0,'pulse'],['⚠️','Danger zone sensor','Proposed safety alert system. Concept, untested.',0,'spin'],['💡','RGB LED lighting','Colourful lights in the sole, visible in the photos.',1,'pulse'],['🔌','USB charging','A charging port is visible on the side. Battery details to confirm.',1,''],['🪶','Comfort technology','Lightweight, cushioned fit. Specs to be confirmed.',0,''],['🧗','Non-slip outsole','Grip pattern to be confirmed by the store.',0,'']];
+$('#tg').innerHTML=TC.map(t=>`<div class="tc" data-tilt><div class="ic big2 ${t[4]}">${t[0]}</div><h3>${t[1]}</h3><p>${t[2]}</p><span class="badge ${t[3]?'ok':'pr'}">${t[3]?'Visible on product':'Prototype / to confirm'}</span></div>`).join('');
+// Colour images are simulated recolours of the original photo. Replace with real photos per colour.
+const V={"dino_navy": "assets/dino_navy.webp", "dino_green": "assets/dino_green.webp", "dino_black": "assets/dino_black.webp", "dino_grey": "assets/dino_grey.webp", "butterfly_orig": "assets/butterfly_orig.webp", "butterfly_lilac": "assets/butterfly_lilac.webp", "butterfly_blue": "assets/butterfly_blue.webp", "butterfly_white": "assets/butterfly_white.webp", "butterfly_black": "assets/butterfly_black.webp"};
+const FD=['Smart LED lighting','Side power button, USB port','Cushioned inner, durable outsole'];
+const P=[{id:'dino',cat:'boys',name:'StrideX Dino Smart LED Shoes',el:'shop',price:2499,feat:['Dinosaur-inspired design',...FD],v:[['navy','Navy Blue / Neon Green','#14275a','#2d6cdf'],['green','Forest Green / Neon Green','#2a7a3c','#2a9a4c'],['black','Black / Neon Green','#151515','#2fb344'],['grey','Grey / Neon Green','#a5a5b0','#6b6f85']]},{id:'butterfly',cat:'girls',name:'NatureGlow Butterfly LED Shoes',el:'shop2',price:2499,feat:['Butterfly-inspired design',...FD],v:[['orig','Pink & Purple','#d86fc4','#d4469c'],['lilac','Lilac','#c9b3f0','#9a6bdc'],['blue','Blue','#3aa6e8','#1f8ad0'],['white','White','#f4f1f8','#a68cd9'],['black','Black / Neon Pink','#161616','#ff3fb4']]}];
+P.forEach(p=>{p.sizes=['3 yrs','4 yrs','5 yrs','6 yrs','7 yrs','8 yrs'];p.cur=p.v[0][0]});
+const vi=(p,k)=>V[p.id+'_'+k],vn=(p,k)=>p.v.find(x=>x[0]==k)[1];
+let cart=[],wl=[],sel={};try{cart=JSON.parse(localStorage.getItem('sx_cart2')||'[]');wl=JSON.parse(localStorage.getItem('sx_wl')||'[]')}catch(e){}
+const sv=()=>{try{localStorage.setItem('sx_cart2',JSON.stringify(cart));localStorage.setItem('sx_wl',JSON.stringify(wl))}catch(e){}};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800)}
+P.forEach(p=>$('#'+p.el).insertAdjacentHTML('beforeend',`<article class="card" data-tilt id="c-${p.id}" style="--acc:${p.v[0][3]}"><div class="pic"><img id="im-${p.id}" alt="${p.name}" src="${vi(p,p.cur)}"></div><div class="cb"><h3>${p.name}</h3><div class="price">${fmt(p.price)}</div><div class="cols" data-id="${p.id}">${p.v.map((c,i)=>`<button data-col="${c[0]}" aria-pressed="${i==0}" aria-label="${c[1]}" title="${c[1]}" style="background:${c[2]}"></button>`).join('')}</div><div class="note" style="margin-bottom:10px"><b id="cn-${p.id}">${p.v[0][1]}</b><span id="sm-${p.id}"${['orig','navy'].includes(p.v[0][0])?' hidden':''}> · colour preview is simulated from the original photo</span></div><ul class="f">${p.feat.map(f=>`<li>${f}</li>`).join('')}</ul><div class="note" style="margin-bottom:6px">Size (age, 3 to 8 years)</div><div class="sizes" data-id="${p.id}">${p.sizes.map(z=>`<button aria-pressed="false">${z}</button>`).join('')}</div><div class="row"><button class="btn" data-add="${p.id}">Add to bag</button><button class="btn alt" data-buy="${p.id}">Buy now</button><button class="btn alt wish" data-wish="${p.id}" aria-pressed="false" aria-label="Add to wishlist">♡</button></div></div></article>`));
+function flt(){const q=$('#q').value.toLowerCase().trim(),c=$('#cat').value;let n=0;P.forEach(p=>{const t=(p.name+' '+p.cat+' led '+p.v.map(x=>x[1]).join(' ')).toLowerCase(),ok=(c=='all'||c=='led'||p.cat==c)&&(!q||t.includes(q));$('#'+p.el).closest('section').style.display=ok?'':'none';if(ok)n++});$('#cntx').textContent=n?n+' of '+P.length+' products':'No products match'}
+$('#q').oninput=flt;$('#cat').onchange=flt;flt();
+function paint(){document.querySelectorAll('.wish').forEach(w=>{const on=wl.includes(w.dataset.wish);w.setAttribute('aria-pressed',on);w.textContent=on?'♥':'♡'})}
+document.addEventListener('click',e=>{const b=e.target;
+ if(b.dataset.col){const p=P.find(x=>x.id==b.parentElement.dataset.id);p.cur=b.dataset.col;b.parentElement.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x==b));$('#im-'+p.id).src=vi(p,p.cur);$('#cn-'+p.id).textContent=vn(p,p.cur);$('#sm-'+p.id).hidden=['orig','navy'].includes(p.cur);b.closest('.card').style.setProperty('--acc',p.v.find(x=>x[0]==p.cur)[3])}
+ if(b.closest('.sizes button')){const w=b.parentElement;w.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');sel[w.dataset.id]=b.textContent}
+ const a=b.dataset.add||b.dataset.buy;if(a){if(!sel[a]){toast('Select a size first');return}const p=P.find(x=>x.id==a),it=cart.find(c=>c.id==a&&c.size==sel[a]&&c.col==p.cur);it?it.q++:cart.push({id:a,size:sel[a],col:p.cur,q:1});sv();render();b.dataset.buy?$('#drawer').classList.add('open'):toast('Added to bag')}
+ if(b.dataset.q){const[i,d]=b.dataset.q.split(',');cart[i].q+=+d;if(cart[i].q<1)cart.splice(i,1);sv();render()}
+ if(b.dataset.rm){cart.splice(b.dataset.rm,1);sv();render()}
+ if(b.dataset.wish){const id=b.dataset.wish;wl=wl.includes(id)?wl.filter(x=>x!=id):[...wl,id];sv();paint()}
+ if(b.id=='apply')toast('Coupons come from the admin panel once connected')});
+$('#open').onclick=()=>$('#drawer').classList.add('open');$('#close').onclick=()=>$('#drawer').classList.remove('open');addEventListener('keydown',e=>{if(e.key=='Escape')$('#drawer').classList.remove('open')});
+function render(){cart=cart.filter(c=>{const p=P.find(x=>x.id==c.id);return p&&p.sizes.includes(c.size)});$('#cnt').textContent=cart.reduce((s,c)=>s+c.q,0);
+ if(!cart.length){$('#items').innerHTML='<p style="color:var(--mu);margin-top:40px">Your bag is empty. Pick a pair, a colour and a size to start.</p>';$('#foot').innerHTML='';return}
+ $('#items').innerHTML=cart.map((c,i)=>{const p=P.find(x=>x.id==c.id),k=p.v.some(x=>x[0]==c.col)?c.col:p.v[0][0];return`<div class="li"><img class="th" alt="" src="${vi(p,k)}"><div style="flex:1"><b>${p.name}</b><div class="note">${vn(p,k)} · Size ${c.size} · ${fmt(p.price)}</div><div class="q" style="margin-top:6px"><button data-q="${i},-1" aria-label="Fewer">−</button> ${c.q} <button data-q="${i},1" aria-label="More">+</button> <button data-rm="${i}" style="width:auto;padding:0 8px;margin-left:8px">Remove</button></div></div><b>${fmt(p.price*c.q)}</b></div>`}).join('');
+ const sub=cart.reduce((s,c)=>s+P.find(x=>x.id==c.id).price*c.q,0);
+ $('#foot').innerHTML=`<div style="display:flex;gap:8px;margin:14px 0"><input id="cp" placeholder="Coupon code"><button class="btn alt" id="apply">Apply</button></div><div class="tot"><div><span>Subtotal</span><span>${fmt(sub)}</span></div><div><span>Shipping</span><span>Set by store</span></div><div><b>Total</b><b>${fmt(sub)}</b></div></div><button class="btn" id="chk" style="width:100%;margin-top:14px">Proceed to checkout</button><p class="note">Pay by Cash on Delivery or UPI. Shipping charges are set by the store.</p>`}
+render();paint();
+const red=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!red)document.querySelectorAll('[data-tilt]').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')});
+const v=$('#vid');new IntersectionObserver(([x])=>{x.isIntersecting?v.play().catch(()=>{}):v.pause()},{threshold:.5}).observe(v);
+const PAL={n:[0xf8a8cb,0x6fbfa3],b:[0x4fcf5a,0x3aa6e8],g:[0xf06bb0,0x9a6bdc]};
+const LAY={n:{b:[-.75,-.3,.6,1],g:[.75,.3,.6,1]},b:{b:[0,0,1,1],g:[2.4,0,.01,0]},g:{b:[-2.4,0,.01,0],g:[0,0,1,1]}};
+try{
+ const R=new THREE.WebGLRenderer({canvas:$('#gl'),alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,60),W=3.2;
+ const mk=(url,h)=>{const t=new THREE.TextureLoader().load(url,()=>{if(red)frame()});t.anisotropy=R.capabilities.getMaxAnisotropy();const g=new THREE.Group();const ms=[[-.1,.22],[-.05,.45],[0,1]].map(([z,o],i)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(W,W*h),new THREE.MeshBasicMaterial({map:t,transparent:true,opacity:o,color:i<2?0x9a8fb0:0xffffff,depthWrite:false}));m.position.z=z;g.add(m);return[m,o]});S.add(g);return{g,ms,x:0,y:red?0:-3,s:red?1:0,o:1}};
+ const sb=mk(HB,0.6975),sg=mk(HG,0.725);
+ const c2=document.createElement('canvas');c2.width=c2.height=128;const x=c2.getContext('2d'),gr=x.createRadialGradient(64,64,0,64,64,64);gr.addColorStop(0,'#fff');gr.addColorStop(1,'#fff0');x.fillStyle=gr;x.fillRect(0,0,128,128);
+ const glow=new THREE.Mesh(new THREE.PlaneGeometry(7,5),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(c2),transparent:true,depthWrite:false,opacity:.5}));glow.position.z=-.8;S.add(glow);
+ const ring=new THREE.Mesh(new THREE.RingGeometry(1.4,1.55,64),new THREE.MeshBasicMaterial({transparent:true,opacity:.5,side:THREE.DoubleSide}));ring.rotation.x=-1.3;S.add(ring);
+ const N=300,pa=new Float32Array(N*3);for(let i=0;i<N;i++){pa[i*3]=(Math.random()-.5)*14;pa[i*3+1]=(Math.random()-.5)*9;pa[i*3+2]=(Math.random()-.5)*8-1}
+ const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pa,3));const pm=new THREE.PointsMaterial({size:.07,transparent:true,opacity:.6,depthWrite:false}),pts=new THREE.Points(pg,pm);S.add(pts);
+ const cur={x:1.9,y:-.1,z:5.8,r:-.35},tg={...cur},c1=new THREE.Color(0xf8a8cb),c2c=new THREE.Color(0x6fbfa3),mo={x:0,y:0};
+ addEventListener('pointermove',e=>{mo.x=e.clientX/innerWidth-.5;mo.y=e.clientY/innerHeight-.5});
+ const size=()=>{R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix()};size();addEventListener('resize',size);
+ const secs=[...document.querySelectorAll('[data-cam]')];let t=0;
+ function frame(){t+=.016;let best=secs[0],bd=1e9;secs.forEach(s=>{const r=s.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-innerHeight/2);if(d<bd){bd=d;best=s}});
+  const[cx,cy,cz,cr,k]=best.dataset.cam.split(',');const nar=innerWidth<900;tg.x=nar?0:+cx;tg.y=nar?1.1:+cy;tg.z=nar?+cz+2.2:+cz;tg.r=+cr;
+  const f=red?1:.06,sy=scrollY;['x','y','z','r'].forEach(a=>cur[a]+=(tg[a]-cur[a])*f);
+  const L=LAY[k]||LAY.n;
+  [[sb,L.b,0],[sg,L.g,1]].forEach(([sh,l,i])=>{sh.x+=(l[0]*(nar?.55:1)-sh.x)*f;sh.y+=(l[1]-sh.y)*f;sh.s+=(l[2]*(nar&&k=='n'?.8:1)-sh.s)*f;sh.o+=(l[3]-sh.o)*f;
+   const bob=red?0:Math.sin(sy*.004+i*1.7)*.28+Math.sin(t*1.3+i)*.05;
+   sh.g.position.set(cur.x+sh.x,cur.y+sh.y+bob,i*.01);sh.g.scale.setScalar(Math.max(sh.s,.001));
+   sh.g.rotation.y=cur.r*(i?-.8:.8)+mo.x*.5+(red?0:Math.sin(sy*.003+i)*.3);sh.g.rotation.x=mo.y*.25;sh.g.rotation.z=red?0:Math.sin(sy*.002+i*2)*.05;
+   sh.g.visible=sh.s>.03;sh.ms.forEach(([m,o])=>{m.material.opacity=o*Math.max(0,Math.min(1,sh.o))})});
+  c1.lerp(new THREE.Color(PAL[k][0]),.05);c2c.lerp(new THREE.Color(PAL[k][1]),.05);glow.material.color.copy(c1);ring.material.color.copy(c2c);pm.color.copy(c2c);
+  glow.position.set(cur.x,cur.y,-.8);ring.position.set(cur.x,cur.y-1.05,0);ring.scale.setScalar((k=='n'?1.4:1)*(1+(red?0:Math.sin(t*2)*.05)));
+  C.position.z=cur.z;pts.rotation.y=t*.02;pts.position.y=sy*.0008;R.render(S,C);if(!red)requestAnimationFrame(frame)}
+ frame();if(red){addEventListener('scroll',frame);addEventListener('resize',frame)}
+}catch(e){$('#gl').style.display='none';$('#fb').style.display='block'}
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+// Replace with your own UPI ID before taking real payments.
+const UPI={id:'demo@ybl',name:'StrideX'};
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let draft={method:'cod'};
+const E=()=>document.getElementById('co');
+const lines=()=>cart.map(c=>{const p=P.find(x=>x.id==c.id),k=p.v.some(x=>x[0]==c.col)?c.col:p.v[0][0];return{name:p.name,col:vn(p,k),size:c.size,q:c.q,price:p.price}});
+const total=()=>lines().reduce((s,l)=>s+l.price*l.q,0);
+function openCO(){if(!cart.length)return;$('#drawer').classList.remove('open');let el=E();if(!el){el=document.createElement('div');el.id='co';el.className='co';el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');el.setAttribute('aria-label','Checkout');document.body.appendChild(el)}el.style.display='flex';formView()}
+function closeCO(){if(E())E().style.display='none'}
+function grab(){['name','mobile','email','city','state','pin','address'].forEach(k=>{const i=document.getElementById('f-'+k);if(i)draft[k]=i.value.trim()});draft.mobile=(draft.mobile||'').replace(/[\s-]/g,'');const r=document.querySelector('input[name=pm]:checked');if(r)draft.method=r.value}
+function valid(){const d=draft;return [['name',d.name.length<2,'Please enter your full name.'],['mobile',!/^[6-9]\d{9}$/.test(d.mobile),'Enter a valid 10-digit mobile number (without +91).'],['email',!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email),'Enter a valid email address.'],['city',d.city.length<2,'Please enter your city.'],['state',d.state.length<2,'Please enter your state.'],['pin',!/^\d{6}$/.test(d.pin),'PIN code must be 6 digits.'],['address',d.address.length<8,'Please enter your complete address (at least 8 characters).']].find(x=>x[1])||null}
+const summary=()=>lines().map(l=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:3px 0"><span>${esc(l.name)} · ${esc(l.col)} · Size ${esc(l.size)} × ${l.q}</span><b>${fmt(l.price*l.q)}</b></div>`).join('')+`<div style="display:flex;justify-content:space-between;border-top:1px solid #eee;margin-top:6px;padding-top:6px"><b>Total</b><b>${fmt(total())}</b></div><p class="note" style="margin:6px 0 0">Shipping charges are set by the store and are not included.</p>`;
+function formView(bad){const f=(id,l,ph,ty)=>`<label class="fl">${l}<input id="f-${id}" type="${ty||'text'}" placeholder="${ph||''}" value="${esc(draft[id]||'')}"></label>`;
+ E().innerHTML=`<div class="cop"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Checkout</h2><button class="btn alt" id="co-x" style="padding:6px 12px">Close</button></div><p class="err" id="co-err" role="alert" style="font-weight:700;margin:10px 0 0">${bad?esc(bad[2]):''}</p>
+<div class="two" style="margin-top:14px">${f('name','Full name')}${f('mobile','Mobile number','10-digit number','tel')}${f('email','Email address','','email')}${f('city','City')}${f('state','State')}${f('pin','PIN code','6 digits')}</div>
+<label class="fl">Complete delivery address<textarea id="f-address" rows="2">${esc(draft.address||'')}</textarea></label>
+<h3 style="margin:14px 0 8px;font-size:17px">Payment</h3>
+<label class="pay"><input type="radio" name="pm" value="cod" ${draft.method=='cod'?'checked':''}><b>Cash on Delivery</b><span class="note">Pay in cash when the shoes arrive.</span></label>
+<label class="pay"><input type="radio" name="pm" value="upi" ${draft.method=='upi'?'checked':''}><b>UPI (scan QR)</b><span class="note">A QR for ${fmt(total())} is generated for ${esc(UPI.id)}.</span></label>
+<div class="panel" style="margin:14px 0 0;box-shadow:none;border:1px solid #eee">${summary()}</div>
+<p class="err" role="alert" style="font-weight:700;margin:10px 0">${bad?esc(bad[2]):''}</p><button class="btn" id="co-go" style="width:100%">${draft.method=='upi'?'Continue to UPI payment':'Place order'}</button></div>`;
+ const t=document.getElementById('f-'+(bad?bad[0]:'name'));if(bad){t.style.borderColor='#c0262d';t.style.background='#fff4f4'}t.focus({preventScroll:true});t.scrollIntoView({block:'center'})}
+const newId=()=>'STX-'+Date.now().toString(36).toUpperCase()+Math.random().toString(36).slice(2,5).toUpperCase();
+function upiView(err){const link=`upi://pay?pa=${UPI.id}&pn=${encodeURIComponent(UPI.name)}&am=${total().toFixed(2)}&cu=INR&tn=${encodeURIComponent('StrideX '+draft.oid)}`;
+ E().innerHTML=`<div class="cop" style="text-align:center"><h2 style="margin:0 0 4px">Pay ${fmt(total())} by UPI</h2><p class="note">Order ${esc(draft.oid)} · pay to <b>${esc(UPI.id)}</b></p><div class="qr" id="qr" aria-label="UPI payment QR code"></div><a class="btn" href="${link}" style="display:inline-block">Open UPI app (on phone)</a>
+<p class="note" style="max-width:46ch;margin:12px auto">This page cannot see whether money arrived. After paying, enter the 12-digit UTR / reference number shown in your UPI app. The store checks it manually.</p>
+<label class="fl" style="max-width:320px;margin:0 auto 10px;text-align:left">UTR / transaction reference<input id="f-utr" inputmode="numeric" maxlength="12" placeholder="12 digits"></label><p class="note err" id="co-err" role="alert">${err||''}</p>
+<div class="row" style="max-width:420px;margin:auto"><button class="btn alt" id="co-back">Back</button><button class="btn" id="co-paid">I have paid</button></div></div>`;
+ const q=document.getElementById('qr');if(window.QRCode){new QRCode(q,{text:link,width:210,height:210,correctLevel:QRCode.CorrectLevel.M})}else q.textContent='QR could not load. Pay to '+UPI.id+' using any UPI app.';E().querySelector('.cop').scrollTop=0}
+const txt=o=>`StrideX order ${o.id}\n`+o.items.map(l=>`${l.name} (${l.col}, size ${l.size}) x${l.q} = ${fmt(l.price*l.q)}`).join('\n')+`\nTotal: ${fmt(o.total)} (shipping to be confirmed)\nPayment: ${o.method}${o.utr?' / UTR '+o.utr:''}\nStatus: ${o.status}\nName: ${o.customer.name}\nMobile: ${o.customer.mobile}\nEmail: ${o.customer.email}\nAddress: ${o.customer.address}, ${o.customer.city}, ${o.customer.state} ${o.customer.pin}`;
+function finish(method,utr){const d=draft,o={id:d.oid,ts:new Date().toISOString(),items:lines(),total:total(),method,utr:utr||'',status:method=='COD'?'Order placed. Pay cash on delivery.':'Placed. Payment awaiting store verification.',customer:{name:d.name,mobile:d.mobile,email:d.email,address:d.address,city:d.city,state:d.state,pin:d.pin}};
+ try{const a=JSON.parse(localStorage.getItem('sx_orders')||'[]');a.push(o);localStorage.setItem('sx_orders',JSON.stringify(a))}catch(e){}
+ cart=[];sv();render();draft={method:'cod'};doneView(o)}
+function doneView(o){E().innerHTML=`<div class="cop"><h2 style="margin:0 0 6px">Order recorded</h2><p><b>${esc(o.id)}</b> · ${esc(o.status)}</p><div class="panel" style="box-shadow:none;border:1px solid #eee">${o.items.map(l=>`<div style="display:flex;justify-content:space-between;gap:10px"><span>${esc(l.name)} · ${esc(l.col)} · Size ${esc(l.size)} × ${l.q}</span><b>${fmt(l.price*l.q)}</b></div>`).join('')}<div style="display:flex;justify-content:space-between;border-top:1px solid #eee;margin-top:6px;padding-top:6px"><b>Total</b><b>${fmt(o.total)}</b></div></div>
+<p class="note"><b>Important:</b> tap “Send order on WhatsApp” and press Send. Until you do, the store has not received this order.</p><textarea id="co-txt" rows="7" readonly style="width:100%">${esc(txt(o))}</textarea><a class="btn" id="co-wa" href="https://wa.me/916200371216?text=${encodeURIComponent(txt(o))}" target="_blank" rel="noopener" style="text-align:center;background:#25d366;color:#052e16;display:block;margin-top:10px">Send order on WhatsApp</a><div class="row" style="margin-top:10px"><button class="btn alt" id="co-copy">Copy order details</button><button class="btn alt" id="co-x">Close</button></div></div>`}
+document.addEventListener('click',e=>{const b=e.target;if(!b||!b.id&&b!==E())return;
+ if(b.id=='chk')openCO();if(b.id=='co-x'||b===E())closeCO();
+ if(b.id=='co-go'){grab();const er=valid();if(er){formView(er);return}draft.oid=draft.oid||newId();draft.method=='cod'?finish('COD'):upiView()}
+ if(b.id=='co-back'){formView()}
+ if(b.id=='co-paid'){const u=document.getElementById('f-utr').value.trim();if(!/^\d{12}$/.test(u)){upiView('Enter the 12-digit UTR from your UPI app.');return}finish('UPI',u)}
+ if(b.id=='co-copy'){const t=document.getElementById('co-txt');t.select();(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).then(()=>toast('Copied'),()=>toast('Press Ctrl+C to copy'))}});
+addEventListener('keydown',e=>{if(e.key=='Escape')closeCO()});
+</script>
+</body></html>
